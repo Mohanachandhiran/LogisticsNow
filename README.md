@@ -15,7 +15,9 @@ LogisticsNow is a modern web application built with React and Vite. It provides 
 
 ### Prerequisites
 
-Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+Make sure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/)
+- [Python 3.8+](https://www.python.org/) (for the backend)
 
 ### Installation
 
@@ -29,20 +31,42 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
    cd LogisticsNow
    ```
 
-3. Install all the required dependencies using npm:
+### Running the Backend
+
+The project uses a Flask backend. You need to start it separately.
+
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+
+2. Install the required Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Start the Flask server:
+   ```bash
+   python app.py
+   ```
+
+The backend server will run at `http://localhost:5000`.
+
+### Running the Frontend
+
+To start the React development server, open a new terminal in the root `LogisticsNow` directory and run:
+
+1. Install frontend dependencies:
    ```bash
    npm install
    ```
 
-### Running the Application
+2. Start the Vite development server:
+   ```bash
+   npm run dev
+   ```
 
-To start the development server, run:
-
-```bash
-npm run dev
-```
-
-The application will be accessible at `http://localhost:5173/` by default.
+The frontend application will be accessible at `http://localhost:5173/` by default.
 
 ### Building for Production
 
