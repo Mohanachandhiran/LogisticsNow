@@ -1,0 +1,30 @@
+
+> logistics@0.0.0 lint
+> eslint .
+
+
+C:\Users\mohan\OneDrive\Desktop\Logistics\src\components\Navbar.jsx
+  3:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\mohan\OneDrive\Desktop\Logistics\src\components\ProcessingSteps.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\mohan\OneDrive\Desktop\Logistics\src\components\UploadCard.jsx
+  5:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\mohan\OneDrive\Desktop\Logistics\src\pages\UploadPage.jsx
+    5:10   error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    no-unused-vars
+  180:128  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  178 |                                      <div className="flex items-center space-x-3">
+  179 |                                         <div className="w-full bg-slate-800 rounded-full h-2 min-w-[80px]">
+> 180 |                                            <div className="bg-emerald-500 h-2 rounded-full" style={{ width: `${Math.floor(80 + Math.random() * 18)}%` }}></div>
+      |                                                                                                                                ^^^^^^^^^^^^^ Cannot call impure function
+  181 |                                         </div>
+  182 |                                         <span className="text-emerald-400 font-mono text-xs font-bold">High</span>
+  183 |                                      </div>  react-hooks/purity
+
+✖ 5 problems (5 errors, 0 warnings)
+
