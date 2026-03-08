@@ -51,7 +51,7 @@ export function RFQPage() {
     try {
       selectedLanesData.forEach(async (lane) => {
         const potentialImpact = lane.healthScore ? Math.floor(100 - lane.healthScore) : 15;
-        await fetch('http://127.0.0.1:5000/api/send-rfq', {
+        await fetch(`${import.meta.env.VITE_API_URL || 'http://127.0.0.1:5000'}/api/send-rfq`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
